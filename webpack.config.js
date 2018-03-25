@@ -7,13 +7,18 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
-  entry: './src/app.jsx',
+  entry: './src/App.tsx',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'
   },
   module: {
     rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
       {
         test: /\.jsx|js$/,
         exclude: /node_modules/,
@@ -30,6 +35,9 @@ module.exports = {
         ]
       }
     ]
+  },
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.jsx', '.js' ]
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {
