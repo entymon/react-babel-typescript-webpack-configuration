@@ -20,7 +20,9 @@ This is basic configuration for React (created at 25.03.2018)
 
 ## Conclusions
 
-I remembered how it was working before updates. After run webpack command this creates always additional directory with source code and I was so confused it does not work now.
+I remembered how it was working before updates. After run `webpack` command this creates always additional directory with source code and I was so confused it does not work now.
 It just works! Seems like Webpack server does all job for us and creates source code on itself.
 
-## Notice! I didn't test it test with more advance code yet - I ma still learning and any suggestions are very welcome.
+## Notice!
+
+I didn't test it test with more advance code yet - I ma still learning and any suggestions are very welcome.
